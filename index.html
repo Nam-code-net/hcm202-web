@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html class="dark" lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trang chủ - Khát vọng Chủ nghĩa Xã hội</title>
+
+    <!-- Tailwind CDN with plugins -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind custom config -->
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              primary: '#005e61',
+              gold: '#C5A06E',
+              'accent-gold': '#C5A06E',
+              'warm-paper': '#f5f1e6',
+              'deep-red': '#8B0000',
+              'background-light': '#f5f8f8',
+              'background-dark': '#0f2323',
+              'card-dark': '#1b3334',
+              'paper-aged': '#f1e7d0',
+            },
+            fontFamily: {
+              display: ['Epilogue', 'sans-serif'],
+            },
+            borderRadius: { DEFAULT: '0.25rem', lg: '0.5rem', xl: '0.75rem', full: '9999px' },
+          },
+        },
+      }
+    </script>
+
+    <!-- Extra custom styles -->
+    <style>
+      .parchment-texture {
+        background-image: radial-gradient(
+            circle at 50% 50%,
+            rgba(255, 255, 255, 0.05) 0%,
+            transparent 100%
+          ),
+          url(https://lh3.googleusercontent.com/aida-public/AB6AXuDoCzB0P1rIGo2gk8KcqZjXwoq0fN4IdbwPmGmv2gHaX5Y453qwLbd7F2RBztf-kWPeqyQs31d4v-WjON0gAu4WEQdPmesL_tEKPbP_du2h22izA0T2-9Bno3lP-2rNrI5RlIPpZpa4f_6bSJq8gQckmMj6cATXHSdpfUlf4cYgpKI0ZpznYorWHWEnxK5gKNLHQRILHH-cZkqTw6Q4QNT7PSmLcd3zZ-WPUJ40Rr2TtGUBPrfvhxAftTFv64peldCVF0g3XNyu5JvB);
+      }
+      .lotus-bg {
+        background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuAf0ENWQzCa-Xx3hT6QVhuEHDMJdWXV4uak8DntL39DW0MPchCLG0foLOsijkTpge6-SLxzqpKx9FD9XxSrbuDqabIJ_jeuM10-wNq5xLhDTdet0987ejNxfKGpcpWjh9swMUgVib4ntcyUrAFj0SycNMLquTnOjh9UiMwB-prdjYCmcQwoE5vbYUsJ0bjgOZMeM3MMGKVL6lXoOcKQR3rqv1I346smX60WFgX7aRw49zohhWBWNhs0ljy4ARg7g6s09O0knXquZ-iT);
+        background-repeat: repeat;
+        opacity: 0.05;
+      }
+      .hero-gradient {
+        background: linear-gradient(
+          to bottom,
+          rgba(15, 35, 35, 0.8) 0%,
+          rgba(15, 35, 35, 0.4) 50%,
+          rgba(15, 35, 35, 0.9) 100%
+        );
+      }
+      .historical-card {
+        background: rgba(23, 53, 54, 0.8);
+        border: 1px solid rgba(197, 160, 110, 0.2);
+        backdrop-filter: blur(8px);
+      }
+      .paper-texture {
+        background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuDtjbPoJ2mv1Y1yyj605Msq27mA-qpk-C7Rlhnw2LJ0zjs5Im51WQA_g9CtOfM0u4M6A6N4ubfvy8sU-f90mPS0lu8V3ahZ5mwcYd1AWZKmykTKl2g7HHPfJJPI1c7PoFvBuUBwUyol5GhN82G2mtJERygwsdLCqScNljShykuEGILq99lgcugOEaAdpFE9RdvNtWZ-cxOzw5gKzhgAhRQ14HVMuxS2hunIdCm4F9cLNKmL1t2_i1I1-edCd8WZ3tJh82APJBGegAWq);
+      }
+      .grain-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 50;
+        opacity: 0.03;
+        background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuCKKjvVlPggm58m314i_A42n_1D6seDEkR87TCEGeTesfExg07j-aB42yiDpW8p-J5aIYBlxD3eewJtK6qyzGIPMDrH7_Dt2q9iPcHJ8TAiOiw7Tlig_jGlJxfJOPOluwNryxPWumB-DAG-yJplH8lkWcHq4bY0w0hKdsxDD9yjd9gjmeo3gNNUCrIlEJA_1z8DYte3aKbPllcA_U-emOpiak6vuz0GoLnkrEyBhe1FrLfAioGhAFSi0uWNHjvB8fLM1UOUhHGI8770);
+      }
+      .handwritten {
+        font-style: italic;
+        letter-spacing: -0.02em;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark font-display text-white selection:bg-gold selection:text-background-dark"
+  >
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
