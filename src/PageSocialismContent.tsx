@@ -307,6 +307,32 @@ function PageSocialismContent({ onBack }: PageSocialismContentProps) {
               </div>
             </section>
 
+            {/* Video Section */}
+            <section className="py-12 px-6 md:px-12 bg-background-dark">
+              <div className="max-w-4xl mx-auto">
+                <div className="text-center mb-8">
+                  <span className="text-gold font-bold uppercase tracking-[0.3em] text-xs">
+                    Video
+                  </span>
+                  <h2 className="text-white text-2xl md:text-3xl font-black mt-2">Video tài liệu</h2>
+                </div>
+                <div className="flex justify-center">
+                  <div className="w-full aspect-video rounded-xl overflow-hidden shadow-2xl">
+                    <iframe
+                      width="100%"
+                      height="100%"
+                      src="https://www.youtube.com/embed/y00L9b0hqKc"
+                      title="YouTube video player"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowFullScreen
+                      className="w-full h-full"
+                    ></iframe>
+                  </div>
+                </div>
+              </div>
+            </section>
+
             <div className="max-w-4xl mx-auto px-6 md:px-12 py-12">
               {/* Section 1: Tính chất */}
               <section 
